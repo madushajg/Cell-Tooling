@@ -1,0 +1,19 @@
+# Build Output
+.vscode-test/
+*.vsix
+
+# Idea files
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Java
+target/
+
+# NPM
+node_modules/
+dist/
+
+# OS
+.DS_Store
