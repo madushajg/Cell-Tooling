@@ -19,23 +19,6 @@
 import * as vscode from "vscode";
 import init from './init'
 
-// export function activate({ subscriptions }: vscode.ExtensionContext) {
-// 	const myCommandId = 'sample.celleryBuild';
-// 	let buildButton: vscode.StatusBarItem;
-// 	subscriptions.push(vscode.commands.registerCommand(myCommandId, () => {
-// 		vscode.window.showInformationMessage(`Build your Cell`);
-// 	}));
-
-// 	// create a new status bar item that we can now manage
-// 	buildButton = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 50);
-// 	buildButton.command = myCommandId;
-// 	subscriptions.push(buildButton);
-	
-
-// 	// update status bar item once at start
-//     buildButton.text = `Cellery Build`;
-//     buildButton.show();
-// }
 
 export function activate(context: vscode.ExtensionContext) {
 	init(context)
