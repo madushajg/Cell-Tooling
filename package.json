@@ -5,7 +5,7 @@
 	"description": "Cellery VS Code Plugin",
 	"version": "0.1.0",
 	"engines": {
-		"vscode": "^1.39.0"
+		"vscode": "^1.39.2"
 	},
 	"categories": [
 		"Programming Languages"
@@ -22,7 +22,65 @@
 					".bal"
 				]
 			}
-		]
+		],
+		"commands": [
+			{
+				"command": "extension.celleryButtons",
+				"title": "Cellery Action Buttons"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Cellery Action Buttons",
+			"properties": {
+				"actionButtons": {
+					"type": "object",
+					"properties": {
+						"commands": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"cwd": {
+										"type": "string",
+										"required": false
+									},
+									"command": {
+										"type": "string",
+										"required": true
+									},
+									"singleInstance": {
+										"type": "boolean"
+									},
+									"name": {
+										"type": "string"
+									},
+									"color": {
+										"type": "string",
+										"required": false
+									}
+								}
+							}
+						},
+						"defaultColor": {
+							"type": "string",
+							"required": false
+						},
+						"reloadButton": {
+							"type": [
+								"string",
+								"null"
+							],
+							"required": false
+						},
+						"loadNpmCommands": {
+							"type": "boolean",
+							"required": false
+						}
+					}
+				}
+			}
+		}
 	},
 	"scripts": {
 		"format:check": "tslint -p ./ './src/**/*.ts'",
