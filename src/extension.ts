@@ -22,13 +22,6 @@ import init from './init'
 
 export function activate(context: vscode.ExtensionContext) {
 	init(context)
-
-	let disposable = vscode.commands.registerCommand(
-		'extension.celleryButtons',
-		() => init(context)
-	)
-
-	context.subscriptions.push(disposable)
 }
 
 
