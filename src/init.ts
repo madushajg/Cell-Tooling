@@ -29,12 +29,17 @@ const init = async (context: vscode.ExtensionContext) => {
 		{
 			"name": "Run Cell",
 			"color": "#ffffff",
-			"command": "cellery run madusha/tooling:0.1.0",
+			"command": "cellery build ${file} madusha/tooling:0.1.0 && cellery run madusha/tooling:0.1.0 -n tooling",
 		},
 		{
 			"name": "Build Cell",
 			"color": "#ffffff",
 			"command": "cellery build ${file} madusha/tooling:0.1.0",
+		},
+		{
+			"name": "View Cell Logs",
+			"color": "#ffffff",
+			"command": "cellery logs tooling",
 		}
 	]
 
