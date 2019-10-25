@@ -21,7 +21,14 @@ import init from './init'
 
 
 export function activate(context: vscode.ExtensionContext) {
-	init(context)
+    init(context)
+    
+    var watcher = vscode.workspace.createFileSystemWatcher("**/*.bal",);
+    console.log(watcher.ignoreChangeEvents.valueOf())
+
+    watcher.onDidChange(() => {
+        vscode.window.showInformationMessage("change applied!");
+    });
 }
 
 
